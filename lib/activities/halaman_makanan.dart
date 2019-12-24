@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:osg_flutter/search.dart';
 import 'halaman_detail_makanan.dart';
-import 'model.dart';
+import '../model.dart';
 
 class HalamanMakanan extends StatefulWidget {
   HalamanMakanan({Key key}) : super(key: key);
@@ -78,7 +78,7 @@ class _HalamanMakananState extends State<HalamanMakanan> {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(1.0),
             child: Card(
               color: Colors.white,
               child: Column(
