@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:osg_flutter/model.dart';
+
+import 'halaman_detail_makanan.dart';
+import 'model.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -12,6 +14,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   TextEditingController editingController = TextEditingController();
   bool onSearch = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -41,18 +44,18 @@ class _SearchPageState extends State<SearchPage> {
 //API Search
 class ApiClient {
   static Future<APIFoodResponse> getUsers(String users) async {
-    String query = 'q=$users';
-    Response response = await get('https://www.themealdb.com/api/json/v1/1/search.php?s=$query');
-    APIFoodResponse foodResponseFromJson(String str) => APIFoodResponse.fromJson(json.decode(str));
-    return foodResponseFromJson(response.body);
+    Response response = await get(
+        'https://www.themealdb.com/api/json/v1/1/search.php?s=$users');
+//    APIFoodResponse foodResponseFromJson(String str) => APIFoodResponse.fromJson(json.decode(str));
+    print(response.body);
+    print(APIFoodResponse.fromJson(json.decode(response.body)).meals.length);
+    return APIFoodResponse.fromJson(json.decode(response.body));
   }
 }
 
-
-
 class SearchContent extends StatelessWidget {
   final String users;
-
+  List<Meal> mealsList = new List<Meal>();
   SearchContent(this.users);
 
   @override
@@ -61,21 +64,39 @@ class SearchContent extends StatelessWidget {
       child: FutureBuilder<APIFoodResponse>(
         future: ApiClient.getUsers(users),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          APIFoodResponse gitHubUsers = snapshot.data;
+          APIFoodResponse mealsResult = snapshot.data;
+          print(snapshot.data);
           bool connect = snapshot.connectionState == ConnectionState.done;
           if (snapshot.hasData && connect) {
             return ListView.builder(
-              itemCount: gitHubUsers.meals.length,
+              itemCount: mealsResult.meals.length,
               itemBuilder: (BuildContext context, int index) {
+//                Meal meal = mealsList[index];
                 return ListTile(
-                  title: Text(gitHubUsers.meals[index].strMeal),
+                  title: Text(
+                    mealsResult.meals[index].strMeal,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.blue),
+                  ),
+                  subtitle: Text(
+                    mealsResult.meals[index].strCategory,
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  trailing: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: NetworkImage(
+                      mealsResult.meals[index].strMealThumb,
+                    ),
+                  ),
                   onTap: () {
-                    SnackBar snackbar = SnackBar(
-                      content: Text(
-                        gitHubUsers.meals[index].strCategory,
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HalamanDetailMakanan(
+                          meals: mealsResult.meals[index],
+                        ),
                       ),
                     );
-                    Scaffold.of(context).showSnackBar(snackbar);
                   },
                 );
               },

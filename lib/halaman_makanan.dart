@@ -1,18 +1,25 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
+
 import 'package:flutter/material.dart';
-import 'package:osg_flutter/search.dart';
+import 'package:http/http.dart' as http;
+import 'package:osg_project/generated/Screens/ListPesanan.dart';
+import 'package:osg_project/generated/drawer.dart';
+import 'package:osg_project/generated/search.dart';
+
 import 'halaman_detail_makanan.dart';
-import '../model.dart';
+import 'model.dart';
 
 class HalamanMakanan extends StatefulWidget {
   HalamanMakanan({Key key}) : super(key: key);
+
   @override
   _HalamanMakananState createState() => _HalamanMakananState();
 }
 
 class _HalamanMakananState extends State<HalamanMakanan> {
   List<Meal> mealsList = new List<Meal>();
+  bool isFetchingData = true;
+
   @override
   void initState() {
     super.initState();
@@ -40,13 +47,26 @@ class _HalamanMakananState extends State<HalamanMakanan> {
           ),
         ],
       ),
-      body: uiListMakanan(),
+      drawer: AppDrawer(),
+      body: isFetchingData
+          ? Center(child: CircularProgressIndicator())
+          : uiListMakanan(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) => NoteList(),
+          ),
+        ),
+        child: Icon(Icons.note_add),
+        backgroundColor: Colors.blue,
+      ),
     );
   }
 
   Future getAPIFood(int id) async {
     List<Meal> meals = new List<Meal>();
     for (int i = id; i <= id + 7; i++) {
+      print(i);
       var response = await http.get(Uri.encodeFull(
           "https://www.themealdb.com/api/json/v1/1/lookup.php?i=$i"));
       if (response.statusCode == 200) {
@@ -55,10 +75,11 @@ class _HalamanMakananState extends State<HalamanMakanan> {
         meals.add(res.meals[0]);
         setState(() {
           mealsList = meals;
+          isFetchingData = false;
         });
       }
     }
-    // print(meals.length);
+    print(meals.length);
   }
 
   uiListMakanan() {
@@ -78,7 +99,7 @@ class _HalamanMakananState extends State<HalamanMakanan> {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.all(1.0),
+            padding: const EdgeInsets.all(8.0),
             child: Card(
               color: Colors.white,
               child: Column(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:osg_flutter/model.dart';
+
+import 'model.dart';
 
 
 class HalamanDetailMakanan extends StatelessWidget {
