@@ -4,7 +4,7 @@ import 'package:osg_project/generated/Eudeka.dart';
 import 'package:osg_project/generated/Pamanrerere.dart';
 
 import 'Routes.dart';
-import 'halaman_makanan.dart';
+import 'pages/makanan/halaman_makanan.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -32,10 +32,17 @@ class AppDrawer extends StatelessWidget {
           ),
           _createDrawerItem(
               icon: Icons.people,
-              text: 'Paman rerere',
+              text: 'Agung Satrio Budi Prakoso',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Pamanrerere()));
+            },
+          ),
+          _createDrawerItem(
+            icon: Icons.people,
+            text: 'Yang satu lagi siapa ini?',
+            onTap: () {
+
             },
           ),
           _createDrawerItem(

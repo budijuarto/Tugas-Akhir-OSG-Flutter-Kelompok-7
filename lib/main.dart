@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 
-import 'halaman_makanan.dart';
+import 'pages/makanan/halaman_makanan.dart';
 
 void main() => runApp(MyApp());
 

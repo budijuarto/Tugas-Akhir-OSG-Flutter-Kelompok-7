@@ -7,7 +7,7 @@ import 'package:osg_project/generated/drawer.dart';
 import 'package:osg_project/generated/search.dart';
 
 import 'halaman_detail_makanan.dart';
-import 'model.dart';
+import '../../model.dart';
 
 class HalamanMakanan extends StatefulWidget {
   HalamanMakanan({Key key}) : super(key: key);

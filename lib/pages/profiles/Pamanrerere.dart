@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'drawer.dart';
+import '../../drawer.dart';
 
-class BujuPage extends StatelessWidget {
-  static const String routeName = '/buju';
+class Pamanrerere extends StatelessWidget {
+  static const String routeName = '/pamanrerere';
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text("Events"),
+        title: Text("Tentang Agung"),
       ),
       drawer: AppDrawer(),
-      backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: CircleAvatar(
-                  radius: 80.0,
-                  backgroundImage: AssetImage('res/images/maki.jpg'),
-                ),
-              ),
               Text(
-                'ブディジュアルト',
+                'Agung Satrio Budi Prakoso',
                 style : TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 40.0,
@@ -34,7 +26,7 @@ class BujuPage extends StatelessWidget {
                 ),
               ),
               Text(
-                  'FLUTTER DEVELOPER',
+                  'Flutter Novice Developer',
                   style: TextStyle(
                     fontFamily: 'Source Sans Pro',
                     color: Colors.teal[900],
@@ -45,23 +37,6 @@ class BujuPage extends StatelessWidget {
                   )
               ),
               Card(
-                  color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: ListTile(
-                      leading: Icon(
-                          Icons.laptop_mac,
-                          color:Colors.teal[900]
-                      ),
-                      title: Text('https://www.kaggle.com/budijuarto',
-                        style: TextStyle(
-                          color: Colors.teal[900],
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0,
-                        ),
-                      )
-                  )
-              ),
-              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
@@ -69,7 +44,7 @@ class BujuPage extends StatelessWidget {
                         Icons.link,
                         color:Colors.teal[900]
                     ),
-                    title: Text('https://github.com/budijuarto/website-portofolio',
+                    title: Text('https://agung.sera5.id',
                       style: TextStyle(
                         color: Colors.teal[900],
                         fontFamily: 'Source Sans Pro',

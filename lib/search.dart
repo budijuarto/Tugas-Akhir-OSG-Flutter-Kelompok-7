@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-import 'halaman_detail_makanan.dart';
+import 'pages/makanan/halaman_detail_makanan.dart';
 import 'model.dart';
 
 class SearchPage extends StatefulWidget {
