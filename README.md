@@ -10,15 +10,15 @@ Aplikasi Flutter menampilkan daftar makanan dari [mealsDB](https://www.themealdb
 
 ## Created By
 Budi Juarto jobdesk:
--create list menu from api(10 point)
--direct to detail menu(10 point)
--making search food function (5 point)
--making database notes (10 point)
--making drawer (5 point)
--making budi juarto profile(1 point)
+- create list menu from api(10 point)
+- direct to detail menu(10 point)
+- making search food function (5 point)
+- making database notes (10 point)
+- making drawer (5 point)
+- making budi juarto profile(1 point)
 
 Agung Satrio jobdesk :
--making agung profile ( 1 point)
+- making agung profile ( 1 point)
 
 
 ### Online Study Group Eudeka!
