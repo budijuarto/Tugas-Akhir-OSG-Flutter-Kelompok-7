@@ -3,6 +3,12 @@ Aplikasi Flutter menampilkan daftar makanan dari [mealsDB](https://www.themealdb
 
 ## Screenshot
 ![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-38-50-238.jpg)
+![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-38-58-653.jpg)
+![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-39-24-463.jpg)
+![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-39-29-716.jpg)
+![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-39-34-615.jpg)
+
+
 
 ### Built With
 - [Flutter](https://flutter.dev)
