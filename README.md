@@ -1,16 +1,30 @@
-# osg_project
+# {{Aplikasi Makanan}} ( {{Final Project}} )
+Aplikasi pencarian makanan dengan menggunakan api mealdb dimana user bisa mencari makanan dan mencatat resep yang diiginkan di database
 
-A new Flutter application.
+## Screenshot
+![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
 
-## Getting Started
+## Built With
+Flutter
 
-This project is a starting point for a Flutter application.
+## Created By
+Budi Juarto
+Agung Satrio
 
-A few resources to get you started if this is your first Flutter project:
+## Flutter Eudeka!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Info Lebih Lengkap
+Website : [www.eudeka.id](https://www.eudeka.id).  
+Twitter: [@EudekaID](https://twitter.com/EudekaID).  
+Telegram : [@eudekainfo](https://t.me/eudekainfo).  
+Instagram : [@eudeka.id](https://instagram.com/eudeka.id).  
+WhatsApp : [0895351577557](https://wa.me/62895351577557).  
+Email : [info@eudeka.id](mailto:info@eudeka.id).  
+
+
+[kode_kelas]: Eudeka
+
+###### tags: `Templates` `Eudeka`
