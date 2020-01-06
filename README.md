@@ -2,7 +2,7 @@
 Aplikasi Flutter menampilkan daftar makanan dari [mealsDB](https://www.themealdb.com/api.php), beserta detail makanan tersebut.
 
 ## Screenshot
-![mealsapp](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![mealsapp](https://github.com/budijuarto/Tugas-Akhir-OSG-Flutter-Kelompok-7/blob/master/bandicam%202020-01-06%2011-38-50-238.jpg)
 
 ### Built With
 - [Flutter](https://flutter.dev)
@@ -11,10 +11,10 @@ Aplikasi Flutter menampilkan daftar makanan dari [mealsDB](https://www.themealdb
 ## Created By
 Budi Juarto jobdesk:
 -create list menu from api(10 point)
-- direct to detail menu(10 point)
+-direct to detail menu(10 point)
 -making search food function (5 point)
-- making database notes (10 point)
-- making drawer (5 point)
+-making database notes (10 point)
+-making drawer (5 point)
 -making budi juarto profile(1 point)
 
 Agung Satrio jobdesk :
